@@ -90,7 +90,7 @@
     <Content Include="Scripts\app\_namespaces.js" />
     <Content Include="Scripts\app\todoController.js" />
     <Content Include="Scripts\tests\todoControllerTests.js" />
-    <Content Include="Scripts\app\_references.js" />
+    <Content Include="Scripts\_references.js" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\lib\angular\angular-animate.js" />
     <Content Include="Scripts\lib\angular\angular-animate.min.js" />
