@@ -79,6 +79,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\jasmine\jasmine.css" />
     <Content Include="Content\jasmine\jasmine_favicon.png" />
     <Content Include="Content\site.css">
@@ -87,8 +91,17 @@
     <Content Include="Content\site.min.css">
       <DependentUpon>site.less</DependentUpon>
     </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\app\_namespaces.js" />
     <Content Include="Scripts\app\todoController.js" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Scripts\lib\jquery\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\lib\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\lib\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\lib\jquery\jquery-1.9.1.js" />
+    <Content Include="Scripts\lib\jquery\jquery-1.9.1.min.js" />
     <Content Include="Scripts\tests\todoControllerTests.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Global.asax" />
@@ -390,6 +403,7 @@
     <Content Include="Views\Jasmine\SpecRunner.cshtml" />
     <Content Include="Scripts\lib\jasmine\MIT.LICENSE" />
     <Content Include="Scripts\lib\underscore\underscore.min.map" />
+    <Content Include="Scripts\lib\jquery\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
