@@ -5,22 +5,52 @@
         <h2>Todo</h2>
 
         <div ng-controller="Lette.TodoController">
-            <span>{{remaining()}} of {{todos.length}} remaining</span>
-            [ <a class="danger" href="" ng-click="archive()">Remove finished tasks</a> ]
+            
+            <div class="row">
+                <form name="newTodo" ng-submit="add()">
+                    <div class="col-md-2">
+                        <span class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-tasks"></i></span>
+                            <input class="form-control" type="text" name="newTodoText" ng-model="todoText" placeholder="What do you need to do?" required>
+                        </span>
+                    </div>
+                    <div class="col-md-1">
+                        <a class="btn btn-primary btn-sm" href="#" ng-click="add()" ng-disabled="newTodo.$invalid">
+                            <i class="fa fa-plus"></i> Add
+                        </a>
+                    </div>
+                </form>
+            </div>
 
-            <ul class="unstyled">
-                <li ng-repeat="todo in todos">
-                    <label>
-                        <input type="checkbox" ng-model="todo.done" title="{{todo.text}}" />
-                        <span class="done-{{todo.done}}">{{todo.text}}</span>
-                    </label>
-                </li>
-            </ul>
+            <div class="row" style="margin-top: 1em;">
+                <div class="col-md-1">
+                    <i class="fa fa-check-square-o"></i> Todos: {{todos.length}}
+                </div>
+                <div class="col-md-1">
+                    <i class="fa fa-square-o"></i> Remaining: {{remaining()}}
+                </div>
+            </div>
 
-            <form name="newTodo" novalidate>
-                <input type="text" name="newTodoText" ng-model="todoText" size="50" placeholder="What do you need to do?" required>
-                <input type="submit" value="Add" ng-click="add()" ng-disabled="newTodo.$invalid">
-            </form>
+            <div class="row" style="margin-top: 1em;">
+                <div class="col-md-3">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="todo in todos">
+                            <label>
+                                <input type="checkbox" ng-model="todo.done" title="{{todo.text}}" />
+                                <span class="done-{{todo.done}}">{{todo.text}}</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 1em;">
+                <div class="col-md-1">
+                    <a class="btn btn-danger" href="#" ng-click="archive()" ng-disabled="remaining() === todos.length">
+                        <i class="fa fa-trash-o fa-lg"></i> Remove finished tasks
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
