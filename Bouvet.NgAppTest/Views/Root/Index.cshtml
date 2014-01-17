@@ -1,0 +1,27 @@
+﻿
+<div ng-app>
+
+    <div>
+        <h2>Todo</h2>
+
+        <div ng-controller="Lette.TodoController">
+            <span>{{remaining()}} of {{todos.length}} remaining</span>
+            [ <a class="danger" href="" ng-click="archive()">Remove finished tasks</a> ]
+
+            <ul class="unstyled">
+                <li ng-repeat="todo in todos">
+                    <label>
+                        <input type="checkbox" ng-model="todo.done" title="{{todo.text}}" />
+                        <span class="done-{{todo.done}}">{{todo.text}}</span>
+                    </label>
+                </li>
+            </ul>
+
+            <form name="newTodo" novalidate>
+                <input type="text" name="newTodoText" ng-model="todoText" size="50" placeholder="What do you need to do?" required>
+                <input type="submit" value="Add" ng-click="add()" ng-disabled="newTodo.$invalid">
+            </form>
+        </div>
+    </div>
+
+</div>

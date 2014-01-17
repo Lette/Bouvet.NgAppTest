@@ -1,0 +1,65 @@
+﻿body {
+    background-color: #000000;
+    color: #cccccc;
+    font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+    font-size: 16px;
+    margin: 10px 30px;
+}
+
+input {
+    background-color: #000000;
+    color: #cccccc;
+    font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+    font-size: 16px;
+}
+
+input[type=submit] {
+    width: 6em;
+    background-color: #cccccc;
+    color: #000000;
+}
+
+input[type=submit][disabled=disabled] {
+    background-color: #777777;
+    color: #000000;
+}
+
+.danger {
+    color: #ff0000;
+    font-weight: bolder;
+}
+
+.unstyled {
+    list-style: none;
+}
+
+.done-true {
+    text-decoration: line-through;
+}
+
+a,
+a:hover:not(.danger),
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.danger:hover {
+    text-decoration: none;
+    color: #ff0000;
+    font-weight: bolder;
+}
+
+.navbar {
+    background-color: #cccccc;
+    color: #000000;
+    font-size: 1em;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.content {
+    font-size: 1.2em;
+    padding: 0 8px 0 8px;
+}

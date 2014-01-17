@@ -1,0 +1,79 @@
+﻿@bgcolor: #000;
+@fgcolor: #ccc;
+@dangerColor: #ff0000;
+@disabledBgColor: #777;
+
+.normalColors() {
+    background-color: @bgcolor;
+    color: @fgcolor;
+}
+
+.invertedColors() {
+    background-color: @fgcolor;
+    color: @bgcolor;
+}
+
+.disabledColors() {
+    background-color: @disabledBgColor;
+    color: @bgcolor;
+}
+
+.default() {
+    .normalColors;
+    font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+    font-size:16px;
+}
+
+body {
+    .default;
+    margin: 10px 30px;
+}
+
+input {
+    .default;
+}
+
+input[type=submit] {
+    width: 6em;
+    .invertedColors;
+
+    &[disabled=disabled] {
+        .disabledColors;
+    }
+}
+
+.danger {
+    color: @dangerColor;
+    font-weight:bolder;
+}
+
+.unstyled {
+    list-style: none;
+}
+
+.done-true {
+    text-decoration: line-through;
+}
+
+a, a:hover:not(.danger), a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.danger:hover {
+    text-decoration: none;
+    .danger;
+}
+
+.navbar{
+    .invertedColors;
+    font-size: 1em;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.content {
+    font-size: 1.2em;
+    padding: 0 8px 0 8px;
+}
