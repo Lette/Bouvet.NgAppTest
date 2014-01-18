@@ -2,7 +2,7 @@
 
 'use strict';
 
-Lette.TodoController = function($scope) {
+Lette.TodoApp.controller('TodoController', function($scope) {
 
     $scope.todos = [];
 
@@ -25,4 +25,4 @@ Lette.TodoController = function($scope) {
     $scope.archive = function() {
         $scope.todos = _.filter($scope.todos, function(todo) { return !todo.done; });
     };
-};
+});

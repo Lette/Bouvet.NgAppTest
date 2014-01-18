@@ -1,14 +1,14 @@
 ﻿
-<div ng-app>
+<div ng-app="TodoApp">
 
     <div>
         <h2>Todo</h2>
 
-        <div ng-controller="Lette.TodoController">
+        <div ng-controller="TodoController">
             
             <div class="row">
                 <form name="newTodo" ng-submit="add()">
-                    <div class="col-md-2">
+                    <div class="col-lg-3">
                         <span class="input-group">
                             <span class="input-group-addon"><i class="fa fa-tasks"></i></span>
                             <input class="form-control" type="text" name="newTodoText" ng-model="todoText" placeholder="What do you need to do?" required>
@@ -23,10 +23,10 @@
             </div>
 
             <div class="row" style="margin-top: 1em;">
-                <div class="col-md-1">
+                <div class="col-lg-1">
                     <i class="fa fa-check-square-o"></i> Todos: {{todos.length}}
                 </div>
-                <div class="col-md-1">
+                <div class="col-lg-2">
                     <i class="fa fa-square-o"></i> Remaining: {{remaining()}}
                 </div>
             </div>

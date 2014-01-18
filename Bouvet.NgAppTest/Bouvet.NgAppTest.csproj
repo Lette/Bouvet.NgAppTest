@@ -95,6 +95,7 @@
     </Content>
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\_namespaces.js" />
     <Content Include="Scripts\app\todoController.js" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />

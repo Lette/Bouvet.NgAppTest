@@ -1,22 +1,29 @@
 ﻿/// <reference path="~/Scripts/lib/jasmine/jasmine.js" />
+/// <reference path="~/Scripts/lib/angular/angular.js" />
+/// <reference path="~/Scripts/lib/angular/angular-mocks.js" />
 /// <reference path="~/Scripts/app/_namespaces.js" />
+/// <reference path="~/Scripts/app/app.js" />
 /// <reference path="~/Scripts/app/todoController.js" />
 
 'use strict';
 
 describe("TodoController", function() {
-    var scope = {};
-    var todoController;
+    var scope;
 
-    beforeEach(function() {
-        todoController = new Lette.TodoController(scope);
+    beforeEach(function () {
+        angular.mock.module("TodoApp");
+
+        angular.mock.inject(function($rootScope, $controller) {
+            scope = $rootScope.$new();
+            $controller("TodoController", { $scope: scope });
+        });
     });
 
     it("initializes the scope with a zero length todo list", function() {
         expect(scope.todos.length).toEqual(0);
     });
 
-    it("adds a todo item with current todoText", function() {
+    it("adds a todo item with current todoText", function () {
         scope.todoText = "current todo text";
 
         scope.add();
