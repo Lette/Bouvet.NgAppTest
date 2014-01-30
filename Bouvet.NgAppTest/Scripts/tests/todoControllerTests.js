@@ -24,12 +24,12 @@ describe("TodoController", function() {
     });
 
     it("adds a todo item with current todoText", function () {
-        scope.todoText = "current todo text";
+        var todoText = "current todo text";
 
-        scope.add();
+        scope.add(todoText);
 
         expect(scope.todos.length).toEqual(1);
-        expect(scope.todos[0].text).toEqual("current todo text");
+        expect(scope.todos[0].text).toEqual(todoText);
     });
 
     it("adds a new todo item that is not done", function() {
@@ -41,7 +41,7 @@ describe("TodoController", function() {
     it("resets the todoText after adding", function() {
         scope.todoText = "todo text";
 
-        scope.add();
+        scope.add("whatever");
 
         expect(scope.todoText).toEqual("");
     });

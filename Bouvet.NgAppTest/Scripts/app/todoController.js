@@ -6,10 +6,10 @@ Lette.TodoApp.controller('TodoController', function($scope) {
 
     $scope.todos = [];
 
-    $scope.add = function() {
+    $scope.add = function(todoText) {
         $scope.todos.push(
             {
-                text: $scope.todoText,
+                text: todoText,
                 done: false
             });
         $scope.todoText = "";
