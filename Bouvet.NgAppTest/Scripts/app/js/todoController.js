@@ -1,18 +1,18 @@
-﻿/// <reference path="~/Scripts/_references.js" />
+﻿/// <reference path="../../_references.js" />
 
 'use strict';
 
-Lette.TodoApp.controller('TodoController', function($scope) {
+Bouvet.TodoApp.JSApp.controller('TodoController', function($scope) {
 
     $scope.todos = [];
 
-    $scope.add = function(todoText) {
+    $scope.add = function() {
         $scope.todos.push(
             {
-                text: todoText,
+                text: $scope.newTodoText,
                 done: false
             });
-        $scope.todoText = "";
+        $scope.newTodoText = "";
     };
 
     $scope.remaining = function() {

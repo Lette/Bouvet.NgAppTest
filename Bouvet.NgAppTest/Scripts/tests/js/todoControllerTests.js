@@ -1,17 +1,17 @@
 ﻿/// <reference path="~/Scripts/lib/jasmine/jasmine.js" />
 /// <reference path="~/Scripts/lib/angular/angular.js" />
 /// <reference path="~/Scripts/lib/angular/angular-mocks.js" />
-/// <reference path="~/Scripts/app/_namespaces.js" />
-/// <reference path="~/Scripts/app/app.js" />
-/// <reference path="~/Scripts/app/todoController.js" />
+/// <reference path="~/Scripts/app/js/_namespaces.js" />
+/// <reference path="~/Scripts/app/js/app.js" />
+/// <reference path="~/Scripts/app/js/todoController.js" />
 
 'use strict';
 
-describe("TodoController", function() {
+describe("JavaScript TodoController tests", function() {
     var scope;
 
     beforeEach(function () {
-        angular.mock.module("TodoApp");
+        angular.mock.module("JSTodoApp");
 
         angular.mock.inject(function($rootScope, $controller) {
             scope = $rootScope.$new();
@@ -24,12 +24,12 @@ describe("TodoController", function() {
     });
 
     it("adds a todo item with current todoText", function () {
-        var todoText = "current todo text";
+        scope.newTodoText = "current todo text";
 
-        scope.add(todoText);
+        scope.add();
 
         expect(scope.todos.length).toEqual(1);
-        expect(scope.todos[0].text).toEqual(todoText);
+        expect(scope.todos[0].text).toEqual("current todo text");
     });
 
     it("adds a new todo item that is not done", function() {
@@ -39,11 +39,11 @@ describe("TodoController", function() {
     });
 
     it("resets the todoText after adding", function() {
-        scope.todoText = "todo text";
+        scope.newTodoText = "todo text";
 
-        scope.add("whatever");
+        scope.add();
 
-        expect(scope.todoText).toEqual("");
+        expect(scope.newTodoText).toEqual("");
     });
 
     it("counts the items that remains", function() {
