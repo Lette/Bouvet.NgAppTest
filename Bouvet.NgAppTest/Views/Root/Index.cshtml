@@ -6,7 +6,7 @@
         <div ng-controller="TodoController">
             
             <div class="row">
-                <form name="newTodo" ng-submit="add()">
+                <form name="newTodo" ng-submit="newTodo.$valid && add()" novalidate>
                     <div class="col-lg-3">
                         <span class="input-group">
                             <span class="input-group-addon"><i class="fa fa-tasks"></i></span>
@@ -14,7 +14,7 @@
                         </span>
                     </div>
                     <div class="col-md-1">
-                        <a class="btn btn-primary btn-sm" href="#" ng-click="add()" ng-disabled="newTodo.$invalid">
+                        <a class="btn btn-primary btn-sm" href="#" ng-disabled="newTodo.$invalid">
                             <i class="fa fa-plus"></i> Add
                         </a>
                     </div>

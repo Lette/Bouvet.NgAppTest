@@ -8,6 +8,10 @@ var Bouvet;
                 $scope.todos = [];
 
                 $scope.add = function () {
+                    if ((/^\s*$/).test($scope.newTodoText || "")) {
+                        return;
+                    }
+
                     var todo = new Bouvet.TodoApp.Todo($scope.newTodoText, false);
 
                     $scope.todos.push(todo);

@@ -32,7 +32,9 @@ describe("JavaScript TodoController tests", function() {
         expect(scope.todos[0].text).toEqual("current todo text");
     });
 
-    it("adds a new todo item that is not done", function() {
+    it("adds a new todo item that is not done", function () {
+        scope.newTodoText = "some text";
+
         scope.add();
 
         expect(scope.todos[0].done).toEqual(false);
@@ -61,5 +63,29 @@ describe("JavaScript TodoController tests", function() {
 
         expect(scope.todos.length).toEqual(4);
         _.each(scope.todos, function(todo) { expect(todo.done).toEqual(false); });
+    });
+
+    it("does not add todo items without text", function () {
+        scope.newTodoText = "";
+
+        scope.add();
+
+        expect(scope.todos.length).toEqual(0);
+    });
+
+    it("does not add todo items with whitespace-only text", function () {
+        scope.newTodoText = "   ";
+
+        scope.add();
+
+        expect(scope.todos.length).toEqual(0);
+    });
+
+    it("does not add todo items with null text", function () {
+        scope.newTodoText = null;
+
+        scope.add();
+
+        expect(scope.todos.length).toEqual(0);
     });
 });

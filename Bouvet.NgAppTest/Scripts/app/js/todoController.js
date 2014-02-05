@@ -6,12 +6,17 @@ Bouvet.TodoApp.JSApp.controller('TodoController', function($scope) {
 
     $scope.todos = [];
 
-    $scope.add = function() {
+    $scope.add = function () {
+        if ((/^\s*$/).test($scope.newTodoText || "")) {
+            return;
+        }
+
         $scope.todos.push(
             {
                 text: $scope.newTodoText,
                 done: false
             });
+
         $scope.newTodoText = "";
     };
 

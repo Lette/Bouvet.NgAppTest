@@ -9,6 +9,10 @@ module Bouvet.TodoApp.Controllers {
         $scope.todos = [];
 
         $scope.add = ()=> {
+            if ((/^\s*$/).test($scope.newTodoText || "")) {
+                return;
+            }
+
             var todo = new Todo($scope.newTodoText, false);
 
             $scope.todos.push(todo);
