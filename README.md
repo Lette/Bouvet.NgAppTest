@@ -1,11 +1,11 @@
-Bouvet.NgAppTest
-================
+## Bouvet.NgAppTest
 
-AngularJS test project (Todo App), using MVC, Jasmine, Typescript and more.
+AngularJS test project using Jasmine and TDD to recreate the Todo App from the AngularJS home page.
 
-I'm using AngularJS, Jasmine and TDD to recreate the Todo App from the AngularJS home page.
+### Frameworks, languages and tools used
 
-Other frameworks/languages/tools:
+  * [AngularJS](http://angularjs.org/)
+  * [Jasmine](http://pivotal.github.io/jasmine/)
   * [Bootstrap](http://getbootstrap.com/)
   * [Font Awesome](http://fontawesome.io/)
   * [Typescript](http://www.typescriptlang.org/)
