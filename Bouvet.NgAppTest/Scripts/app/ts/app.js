@@ -1,8 +1,9 @@
+/// <reference path="../../typings/angularjs/angular.d.ts"/>
 var Bouvet;
 (function (Bouvet) {
+    var TodoApp;
     (function (TodoApp) {
         TodoApp.TSApp = angular.module("TSTodoApp", []);
-    })(Bouvet.TodoApp || (Bouvet.TodoApp = {}));
-    var TodoApp = Bouvet.TodoApp;
+    })(TodoApp = Bouvet.TodoApp || (Bouvet.TodoApp = {}));
 })(Bouvet || (Bouvet = {}));
 //# sourceMappingURL=app.js.map

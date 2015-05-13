@@ -1,5 +1,6 @@
 var Bouvet;
 (function (Bouvet) {
+    var TodoApp;
     (function (TodoApp) {
         var Todo = (function () {
             function Todo(text, done) {
@@ -9,7 +10,6 @@ var Bouvet;
             return Todo;
         })();
         TodoApp.Todo = Todo;
-    })(Bouvet.TodoApp || (Bouvet.TodoApp = {}));
-    var TodoApp = Bouvet.TodoApp;
+    })(TodoApp = Bouvet.TodoApp || (Bouvet.TodoApp = {}));
 })(Bouvet || (Bouvet = {}));
 //# sourceMappingURL=domain.js.map

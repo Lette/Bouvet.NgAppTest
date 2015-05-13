@@ -1,4 +1,5 @@
 /// <reference path="../../app/ts/domain.ts"/>
+/// <reference path="../../typings/jasmine/jasmine.d.ts"/>
 
 module Bouvet.TodoApp.Tests {
     describe("TypeScript TodoController tests", ()=> {

@@ -2,38 +2,26 @@
 /// <reference path="domain.ts"/>
 var Bouvet;
 (function (Bouvet) {
+    var TodoApp;
     (function (TodoApp) {
+        var Controllers;
         (function (Controllers) {
-            Bouvet.TodoApp.TSApp.controller("TodoController", function ($scope) {
+            TodoApp.TSApp.controller("TodoController", function ($scope) {
                 $scope.todos = [];
-
                 $scope.add = function () {
                     if ((/^\s*$/).test($scope.newTodoText || "")) {
                         return;
                     }
-
-                    var todo = new Bouvet.TodoApp.Todo($scope.newTodoText, false);
-
+                    var todo = new TodoApp.Todo($scope.newTodoText, false);
                     $scope.todos.push(todo);
-
                     $scope.newTodoText = "";
                 };
-
-                $scope.remaining = function () {
-                    return _.reduce($scope.todos, function (i, todo) {
-                        return i + (todo.done ? 0 : 1);
-                    }, 0);
-                };
-
+                $scope.remaining = function () { return _.reduce($scope.todos, function (i, todo) { return i + (todo.done ? 0 : 1); }, 0); };
                 $scope.archive = function () {
-                    $scope.todos = _.filter($scope.todos, function (todo) {
-                        return !todo.done;
-                    });
+                    $scope.todos = _.filter($scope.todos, function (todo) { return !todo.done; });
                 };
             });
-        })(TodoApp.Controllers || (TodoApp.Controllers = {}));
-        var Controllers = TodoApp.Controllers;
-    })(Bouvet.TodoApp || (Bouvet.TodoApp = {}));
-    var TodoApp = Bouvet.TodoApp;
+        })(Controllers = TodoApp.Controllers || (TodoApp.Controllers = {}));
+    })(TodoApp = Bouvet.TodoApp || (Bouvet.TodoApp = {}));
 })(Bouvet || (Bouvet = {}));
 //# sourceMappingURL=todoController.js.map
