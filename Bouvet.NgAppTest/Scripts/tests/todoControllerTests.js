@@ -1,5 +1,3 @@
-/// <reference path="../../app/ts/domain.ts"/>
-/// <reference path="../../typings/jasmine/jasmine.d.ts"/>
 var Bouvet;
 (function (Bouvet) {
     var TodoApp;

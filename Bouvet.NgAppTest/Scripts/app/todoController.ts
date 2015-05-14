@@ -1,8 +1,4 @@
-/// <reference path="app.ts"/>
-/// <reference path="domain.ts"/>
-
 module Bouvet.TodoApp.Controllers {
-
 
     TSApp.controller("TodoController", ($scope: TodoScope)=> {
 

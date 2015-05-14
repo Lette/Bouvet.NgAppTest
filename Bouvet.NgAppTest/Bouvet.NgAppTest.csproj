@@ -104,6 +104,9 @@
     </Content>
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\domain.js" />
+    <Content Include="Scripts\app\todoController.js" />
     <Content Include="Scripts\lib\angular\angular-animate.js" />
     <Content Include="Scripts\lib\angular\angular-animate.min.js" />
     <Content Include="Scripts\lib\angular\angular-aria.js" />
@@ -127,9 +130,6 @@
     <Content Include="Scripts\lib\angular\angular-touch.min.js" />
     <Content Include="Scripts\lib\angular\angular.js" />
     <Content Include="Scripts\lib\angular\angular.min.js" />
-    <Content Include="Scripts\app\js\app.js" />
-    <Content Include="Scripts\app\js\_namespaces.js" />
-    <Content Include="Scripts\app\js\todoController.js" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
@@ -148,6 +148,9 @@
     <Content Include="Scripts\lib\angular\angular-aria.min.js.map" />
     <Content Include="Scripts\lib\angular\angular-animate.min.js.map" />
     <Content Include="Scripts\lib\angular\angular.min.js.map" />
+    <Content Include="Scripts\app\app.js.map" />
+    <Content Include="Scripts\app\domain.js.map" />
+    <Content Include="Scripts\app\todoController.js.map" />
     <None Include="Scripts\lib\jquery\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\lib\angular\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\lib\angular\i18n\angular-locale_aa-er.js" />
@@ -896,7 +899,7 @@
     <Content Include="Scripts\lib\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\lib\jquery\jquery-1.9.1.js" />
     <Content Include="Scripts\lib\jquery\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\tests\js\todoControllerTests.js" />
+    <Content Include="Scripts\tests\todoControllerTests.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\lib\jasmine\jasmine-html.js" />
@@ -926,6 +929,7 @@
     <Content Include="Scripts\lib\underscore\underscore.min.map" />
     <Content Include="Scripts\lib\jquery\jquery-1.9.1.min.map" />
     <Content Include="Scripts\lib\angular\version.json" />
+    <Content Include="Scripts\tests\todoControllerTests.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -938,10 +942,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\app\ts\app.ts" />
-    <TypeScriptCompile Include="Scripts\app\ts\domain.ts" />
-    <TypeScriptCompile Include="Scripts\app\ts\todoController.ts" />
-    <TypeScriptCompile Include="Scripts\tests\ts\todoControllerTests.ts" />
+    <TypeScriptCompile Include="Scripts\app\app.ts" />
+    <TypeScriptCompile Include="Scripts\app\domain.ts" />
+    <TypeScriptCompile Include="Scripts\app\todoController.ts" />
+    <TypeScriptCompile Include="Scripts\tests\todoControllerTests.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
