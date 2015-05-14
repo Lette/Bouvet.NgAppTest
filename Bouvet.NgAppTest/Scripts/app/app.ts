@@ -1,3 +1,5 @@
 module Bouvet.TodoApp {
-    export var TSApp: ng.IModule = angular.module("TSTodoApp", []);
+    "use strict";
+
+    export var app: ng.IModule = angular.module("TSTodoApp", []);
 }

@@ -4,7 +4,8 @@ var Bouvet;
     (function (TodoApp) {
         var Controllers;
         (function (Controllers) {
-            TodoApp.TSApp.controller("TodoController", function ($scope) {
+            "use strict";
+            TodoApp.app.controller("TodoController", function ($scope) {
                 $scope.todos = [];
                 $scope.add = function () {
                     if ((/^\s*$/).test($scope.newTodoText || "")) {

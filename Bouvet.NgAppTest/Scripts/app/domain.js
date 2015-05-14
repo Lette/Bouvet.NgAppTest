@@ -2,6 +2,7 @@ var Bouvet;
 (function (Bouvet) {
     var TodoApp;
     (function (TodoApp) {
+        "use strict";
         var Todo = (function () {
             function Todo(text, done) {
                 this.text = text;

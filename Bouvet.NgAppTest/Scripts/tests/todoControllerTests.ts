@@ -1,7 +1,7 @@
 module Bouvet.TodoApp.Tests {
     describe("TypeScript TodoController tests", ()=> {
 
-        var scope: TodoScope;
+        var scope: Bouvet.TodoApp.ITodoScope;
 
         beforeEach(()=> {
             angular.mock.module("TSTodoApp");

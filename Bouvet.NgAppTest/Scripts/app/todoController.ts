@@ -1,10 +1,11 @@
 module Bouvet.TodoApp.Controllers {
+    "use strict";
 
-    TSApp.controller("TodoController", ($scope: TodoScope)=> {
+    app.controller("TodoController", ($scope: TodoApp.ITodoScope) => {
 
         $scope.todos = [];
 
-        $scope.add = ()=> {
+        $scope.add = () => {
             if ((/^\s*$/).test($scope.newTodoText || "")) {
                 return;
             }
@@ -19,11 +20,11 @@ module Bouvet.TodoApp.Controllers {
         $scope.remaining = () =>
             _.reduce(
                 $scope.todos,
-                (i: number, todo: Todo)=> i + (todo.done ? 0 : 1),
+                (i: number, todo: Todo) => i + (todo.done ? 0 : 1),
                 0);
 
-        $scope.archive = ()=> {
-            $scope.todos = _.filter($scope.todos, (todo: Todo)=> !todo.done);
+        $scope.archive = () => {
+            $scope.todos = _.filter($scope.todos, (todo: Todo) => !todo.done);
         };
     });
 }
