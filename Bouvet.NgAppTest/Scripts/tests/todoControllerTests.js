@@ -4,6 +4,7 @@ var Bouvet;
     (function (TodoApp) {
         var Tests;
         (function (Tests) {
+            "use strict";
             describe("TypeScript TodoController tests", function () {
                 var scope;
                 beforeEach(function () {
