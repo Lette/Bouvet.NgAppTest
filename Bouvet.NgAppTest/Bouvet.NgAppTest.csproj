@@ -906,6 +906,7 @@
     <Content Include="Scripts\lib\jasmine\jasmine.js" />
     <Content Include="Scripts\lib\underscore\underscore.js" />
     <Content Include="Scripts\lib\underscore\underscore.min.js" />
+    <Content Include="TestHarness.html" />
     <Content Include="Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

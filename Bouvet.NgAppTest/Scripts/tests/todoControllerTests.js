@@ -1,3 +1,9 @@
+/// <reference path="../typings/angularjs/angular.d.ts" />
+/// <reference path="../typings/angularjs/angular-mocks.d.ts" />
+/// <reference path="../typings/underscore/underscore.d.ts" />
+/// <reference path="../app/app.ts"/>
+/// <reference path="../app/domain.ts"/>
+/// <reference path="../app/todoController.ts"/>
 var Bouvet;
 (function (Bouvet) {
     var TodoApp;
