@@ -991,4 +991,9 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="AddTsToContent" AfterTargets="CompileTypeScript" Condition="'$(BuildingProject)' != 'false'">
+    <ItemGroup>
+      <Content Include="@(TypeScriptCompile)"/> <!--Condition="'$(Configuration)'=='Debug'"-->
+    </ItemGroup>
+  </Target>
 </Project>
