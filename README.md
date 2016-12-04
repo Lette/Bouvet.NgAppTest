@@ -5,7 +5,7 @@ AngularJS test project using Jasmine and TDD to recreate the Todo App from the A
 ### Frameworks, languages and tools used
 
   * [AngularJS](http://angularjs.org/)
-  * [Jasmine](http://pivotal.github.io/jasmine/)
+  * [Jasmine](https://jasmine.github.io/)
   * [Bootstrap](http://getbootstrap.com/)
   * [Font Awesome](http://fontawesome.io/)
   * [Typescript](http://www.typescriptlang.org/)
